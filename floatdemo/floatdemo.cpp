@@ -2,10 +2,14 @@
 //
 
 #include "pch.h"
+#include "MyFloat.h"
 #include <iostream>
 
 int main()
 {
+	unsigned char buffer[4] = { 0xff, 0xff, 0xff, 0xff };
+	MyFloat *  Float_MIN = new MyFloat(false, -126, buffer);
+	std::cout << Float_MIN->to_string() << std::endl;
     std::cout << "Hello World!\n"; 
 }
 
